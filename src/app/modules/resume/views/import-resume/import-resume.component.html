@@ -1,0 +1,19 @@
+<section class="import">
+  <app-title class="import__title" title="Importe seu Currículo"></app-title>
+  <label class="import__label" for="importResume">
+    <input
+      class="import__upload"
+      type="file"
+      name="importResume"
+      id="importResume"
+      accept="application/json"
+      (change)="upload($event)"
+      value=""
+    />
+    Selecione seu Currículo
+  </label>
+  <p class="import__filename">{{ filename }}</p>
+  <button class="import__button" (click)="send()" [disabled]="resume === null">
+    Enviar
+  </button>
+</section>

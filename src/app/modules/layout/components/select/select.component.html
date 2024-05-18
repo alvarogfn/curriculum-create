@@ -1,0 +1,6 @@
+<app-label [label]="label">
+  <select [name]="label" [formControlName]="controlName">
+    <option selected [ngValue]="null" disabled>Selecione uma opçao</option>
+    <option *ngFor="let value of options" [ngValue]="value">{{ value }}</option>
+  </select>
+</app-label>

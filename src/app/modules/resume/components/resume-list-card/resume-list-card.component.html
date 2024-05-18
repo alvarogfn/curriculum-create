@@ -1,0 +1,7 @@
+<a class="resume" *ngIf="resume" [routerLink]="['/curriculos', resume.id]">
+  <h1 class="resume__name">{{ resume.nome }} {{ resume.sobrenome }}</h1>
+  <p class="resume__email">{{ resume.email }}</p>
+  <p class="resume__phone">
+    {{ resume.telefone | telephone: "BRL" }}
+  </p>
+</a>

@@ -1,0 +1,22 @@
+@use "../../../../../scss/animations.scss" as *;
+
+:host {
+  z-index: 2;
+}
+
+.creator {
+  opacity: 0;
+  animation: appear 200ms ease-in-out forwards;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-image: url("../../../../../assets/document.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 50px;
+
+  &__title {
+    align-self: center;
+  }
+}

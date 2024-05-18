@@ -1,0 +1,9 @@
+label {
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 5px;
+
+  height: inherit;
+}

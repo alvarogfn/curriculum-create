@@ -1,0 +1,6 @@
+<ul *ngIf="value?.invalid && (value?.dirty || value?.touched)">
+  <li *ngIf="value?.errors?.['required']">Obrigatório!</li>
+  <li *ngIf="value?.errors?.['email']">Esse email não é válido.</li>
+  <li *ngIf="value?.errors?.['mask']">Formato é inválido.</li>
+  <li *ngIf="value?.errors?.['minlength']">Minimo de 15 caracteres.</li>
+</ul>

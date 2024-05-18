@@ -1,0 +1,33 @@
+<section class="card" *ngIf="resume">
+  <app-title
+    class="card__title"
+    title="{{ resume.nome }} {{ resume.sobrenome }}"
+  >
+  </app-title>
+
+  <section class="card__section">
+    <h2 class="card__subtitle">Detalhes</h2>
+    <app-details-table
+      class="card__table"
+      [resume]="resume"
+    ></app-details-table>
+  </section>
+
+  <section class="card__section">
+    <h2 class="card__subtitle">Experiencia</h2>
+    <p class="card__experiencia">{{ resume.experiencias }}</p>
+  </section>
+
+  <button
+    class="card__button card__button--delete"
+    (click)="deleteResume(resume.id)"
+  >
+    Deletar
+  </button>
+  <button
+    class="card__button card__button--export"
+    (click)="exportResume(resume.id)"
+  >
+    Exportar
+  </button>
+</section>

@@ -1,0 +1,17 @@
+button {
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  padding: 12.5px 40px;
+
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}

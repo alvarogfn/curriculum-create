@@ -1,0 +1,13 @@
+<section class="resumes">
+  <app-title class="resumes__title" title="Currículos Cadastrados"></app-title>
+  <ng-container *ngIf="resumes.length > 0; else elseTemplate">
+    <ul class="resumes__list">
+      <li *ngFor="let resume of resumes; let i = index">
+        <app-resume-list-card [resume]="resume"></app-resume-list-card>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <app-empty class="resumes__empty"></app-empty>
+  </ng-template>
+</section>

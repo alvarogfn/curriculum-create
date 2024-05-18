@@ -1,0 +1,26 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__cel {
+    border: 1px solid #2d2d2d;
+    padding: 15px;
+
+    &:nth-child(odd) {
+      width: 30px;
+
+      background-color: #2d2d2d;
+      color: #f2f2f2;
+
+      text-align: right;
+
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    &:nth-child(even) {
+      font-weight: 900;
+      color: #2d2d2d;
+    }
+  }
+}

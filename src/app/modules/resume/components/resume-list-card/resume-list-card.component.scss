@@ -1,0 +1,60 @@
+.resume {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 7.5px;
+
+  background-color: darken($color: #ffffff, $amount: 5%);
+
+  padding: 10px;
+
+  background-image: url("../../../../../assets/open.svg");
+  background-position: 98.5% center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+
+  cursor: pointer;
+
+  &__name {
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    text-transform: capitalize;
+    color: #2d2d2d;
+
+    font-size: 1.3rem;
+
+    margin-right: 40px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__email,
+  &__phone {
+    flex-basis: 45%;
+    flex-grow: 1;
+
+    min-width: 200px;
+
+    font-size: 0.85rem;
+    color: lighten($color: #000000, $amount: 40%);
+
+    &::before {
+      font-weight: 900;
+      text-transform: capitalize;
+      margin-right: 5px;
+    }
+  }
+
+  &__email::before {
+    content: "Email:";
+  }
+
+  &__phone::before {
+    content: "Telefone:";
+  }
+}

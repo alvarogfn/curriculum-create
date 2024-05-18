@@ -1,0 +1,10 @@
+<app-label [label]="label" for="name">
+  <input
+    [type]="type"
+    [formControlName]="controlName"
+    [required]="required"
+    [mask]="mask"
+    #input
+  />
+  <app-input-error [value]="value"></app-input-error>
+</app-label>

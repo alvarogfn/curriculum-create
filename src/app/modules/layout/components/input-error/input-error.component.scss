@@ -1,0 +1,28 @@
+ul {
+  position: absolute;
+  bottom: -17.5px;
+  left: 5px;
+}
+
+li {
+  animation: appear 200ms ease-in-out forwards;
+
+  font-size: 0.7rem;
+  color: #8d8d8d;
+  text-transform: lowercase;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

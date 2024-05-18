@@ -1,0 +1,32 @@
+@use "../../../../../scss/animations.scss" as *;
+.resumes {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-image: url("../../../../../assets/list.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 50px;
+
+  opacity: 0;
+  animation: appear 200ms ease-in-out forwards;
+
+  &__title {
+    align-self: center;
+  }
+
+  &__list {
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+  }
+
+  &__empty {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+  }
+}

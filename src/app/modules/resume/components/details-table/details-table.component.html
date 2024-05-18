@@ -1,0 +1,24 @@
+<table class="card__table table" *ngIf="resume">
+  <tr class="table__row">
+    <td class="table__cel">Email</td>
+    <td class="table__cel">{{ resume.email }}</td>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cel">Telefone</td>
+    <td class="table__cel">{{ resume.telefone | telephone: "BRL" }}</td>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cel">CPF</td>
+    <td class="table__cel">{{ resume.cpf | cpf }}</td>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cel">Sexo</td>
+    <td class="table__cel">{{ resume.sexo ?? "Nao especificado" }}</td>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cel">Nascimento</td>
+    <td class="table__cel">
+      {{ resume.nascimento | dateFormater }}
+    </td>
+  </tr>
+</table>

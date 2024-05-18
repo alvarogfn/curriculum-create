@@ -1,0 +1,75 @@
+<form class="form" [formGroup]="resumeForm" (submit)="onSubmit()">
+  <app-input
+    class="form__input form__input--nome"
+    label="Nome"
+    controlName="nome"
+    [required]="true"
+    [value]="resumeForm.get('nome')"
+  >
+  </app-input>
+  <app-input
+    class="form__input form__input--sobrenome"
+    label="Sobrenome"
+    controlName="sobrenome"
+    [required]="true"
+    [value]="resumeForm.get('sobrenome')"
+  >
+  </app-input>
+  <app-input
+    class="form__input form__input--email"
+    label="Email"
+    type="email"
+    controlName="email"
+    [required]="true"
+    [value]="resumeForm.get('email')"
+  >
+  </app-input>
+
+  <app-input
+    class="form__input form__input--nascimento"
+    label="Data de Nascimento"
+    type="date"
+    controlName="nascimento"
+    [required]="true"
+    [value]="resumeForm.get('nascimento')"
+  >
+  </app-input>
+
+  <app-select
+    class="form__input form__input--sexo"
+    label="sexo"
+    [options]="['Masculino', 'Feminino']"
+    controlName="sexo"
+  >
+  </app-select>
+
+  <app-input
+    class="form__input form__input--telefone"
+    label="telefone"
+    type="tel"
+    controlName="telefone"
+    mask="(00) 00000-0000"
+    [value]="resumeForm.get('telefone')"
+  >
+  </app-input>
+  <app-input
+    class="form__input form__input--cpf"
+    label="CPF"
+    controlName="cpf"
+    mask="000.000.000-00"
+    [value]="resumeForm.get('cpf')"
+  >
+  </app-input>
+
+  <app-textarea
+    class="form__input form__input--experiencias"
+    label="experiencias"
+    controlName="experiencias"
+    [cols]="15"
+    [value]="resumeForm.get('experiencias')"
+  >
+  </app-textarea>
+  <app-button class="form__button" type="submit" [disabled]="!formIsValid">
+    Cadastrar
+  </app-button>
+</form>

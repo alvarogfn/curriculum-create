@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  flex-flow: row wrap;
+
+  row-gap: 27.5px;
+  column-gap: 15px;
+
+  padding: 20px;
+
+  &__input {
+    width: 200px;
+    flex-grow: 1;
+
+    &--nome {
+      order: 1;
+      flex-basis: 45%;
+    }
+
+    &--sobrenome {
+      order: 2;
+      flex-basis: 45%;
+    }
+
+    &--email {
+      order: 3;
+      flex-basis: 100%;
+    }
+
+    &--nascimento {
+      order: 4;
+      flex-basis: 25%;
+    }
+
+    &--sexo {
+      order: 5;
+      flex-basis: 30%;
+    }
+
+    &--telefone {
+      order: 6;
+      flex-basis: 40%;
+    }
+
+    &--cpf {
+      order: 7;
+      flex-basis: 45%;
+    }
+
+    &--experiencias {
+      order: 8;
+      flex-basis: 100%;
+
+      min-height: 70px;
+    }
+  }
+
+  &__button {
+    order: 9;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}

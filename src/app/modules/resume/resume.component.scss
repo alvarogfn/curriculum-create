@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  width: calc(100% - 50px);
+
+  min-width: 300px;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+
+  border-radius: 5px;
+
+  z-index: 2;
+
+  &__content {
+    padding: 5px;
+  }
+}

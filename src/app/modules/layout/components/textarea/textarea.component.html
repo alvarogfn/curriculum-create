@@ -1,0 +1,12 @@
+<app-label [label]="label">
+  <textarea
+    #textarea
+    [formControlName]="controlName"
+    name=""
+    [rows]="rows"
+    [cols]="cols"
+    (input)="resize()"
+    [style]="{ height: textareaHeight + 'px' }"
+  ></textarea>
+  <app-input-error [value]="value"></app-input-error>
+</app-label>

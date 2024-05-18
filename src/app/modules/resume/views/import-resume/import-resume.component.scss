@@ -1,0 +1,76 @@
+@use "../../../../../scss/animations.scss" as *;
+
+.import {
+  opacity: 0;
+  animation: appear 200ms ease-in-out forwards;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  gap: 20px;
+
+  &__label {
+    cursor: pointer;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-image: url("../../../../../assets/upload.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 50px;
+
+    height: 75px;
+    padding: 10px;
+
+    color: #f2f2f2;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #2d2d2d;
+    box-shadow: 2px 2px 0px lighten($color: #2d2d2d, $amount: 30%);
+  }
+
+  &__upload {
+    display: none;
+  }
+
+  &__filename {
+    text-align: center;
+    font-weight: bold;
+    color: #2d2d2d;
+    flex-basis: 40px;
+  }
+
+  &__send {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+
+  &__button {
+    align-self: flex-end;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+
+    background-color: #2d2d2d;
+    color: white;
+
+    padding: 15px 40px;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+  }
+}
